@@ -43,6 +43,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll
+  jekyll-sass-converter
   kramdown
   passenger
   rack-jekyll
