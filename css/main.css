@@ -38,6 +38,9 @@ h1, h2, h3, h4, h5, h6 {
 .margin-large-right {
   margin-right: 2.8rem; }
 
+.navbar-brand-logo {
+  margin: 3px 10px; }
+
 .lead {
   font-size: 18px;
   font-weight: 400; }
@@ -48,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 50px;
   text-align: center;
   color: #f8f8f8;
-  background: url(../img/intro-bg.jpg) no-repeat center center;
+  background: url(../img/cover.jpg) no-repeat center center;
   background-size: cover; }
 
 .intro-message {

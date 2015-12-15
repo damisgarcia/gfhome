@@ -24,10 +24,10 @@ permalink: pretty
 # ----------------------- #
 
 social:
-  - title: facebook
-    url: https://facebook.com/redegirafales
-  - title: twitter
-    url: https://twitter.com/redegirafales
+  # - title: facebook
+  #   url: https://facebook.com/redegirafales
+  # - title: twitter
+  #   url: https://twitter.com/redegirafales
   # - title: github
   #   url: https://github.com/IronSummitMedia/startbootstrap
   # - title: linkedin
