@@ -1,8 +1,8 @@
 a {
-  color: #337ab7;
+  color: #009056;
   text-decoration: none; }
   a:hover {
-    color: #23527c;
+    color: #004328;
     text-decoration: underline; }
 
 body {
@@ -13,6 +13,15 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   text-color: #222222; }
+
+.btn.btn-primary {
+  background-color: #009056; }
+
+#top.affix {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 60; }
 
 .margin-top {
   margin-top: 1.8rem; }
@@ -38,30 +47,90 @@ h1, h2, h3, h4, h5, h6 {
 .margin-large-right {
   margin-right: 2.8rem; }
 
+.primary-color {
+  color: #009056; }
+
+/**
+ * Fade-zoom animation for first dialog
+ */
+/* start state */
+.my-mfp-zoom-in .zoom-anim-dialog, .my-mfp-zoom-in .mfp-iframe-holder {
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  transform: scale(0.8); }
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog, .my-mfp-zoom-in.mfp-ready .mfp-iframe-holder {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1); }
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog, .my-mfp-zoom-in.mfp-removing .mfp-iframe-holder {
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0; }
+
+/* Dark overlay, start state */
+.my-mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out; }
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.8; }
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing.mfp-bg {
+  opacity: 0; }
+
 .navbar-brand-logo {
   margin: 3px 10px; }
+
+header .navbar {
+  border-radius: 0px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom-color: transparent !important;
+  border-top-color: transparent !important;
+  -webkit-animation-duration: 0.3s !important; }
 
 .lead {
   font-size: 18px;
   font-weight: 400; }
 
 .intro-header {
-  padding-top: 50px;
+  padding-top: 5%;
   /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-  padding-bottom: 50px;
+  padding-bottom: 15%;
   text-align: center;
   color: #f8f8f8;
   background: url(../img/cover.jpg) no-repeat center center;
   background-size: cover; }
+  .intro-header [magnific-popup] {
+    color: #f8f8f8; }
 
 .intro-message {
-  position: relative;
-  padding-top: 20%;
-  padding-bottom: 20%; }
+  position: relative; }
 
 .intro-message > h1 {
   margin: 0;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
   font-size: 5em; }
 
 .intro-divider {

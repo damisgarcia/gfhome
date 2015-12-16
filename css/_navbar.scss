@@ -5,8 +5,11 @@
 
 
 header .navbar{
-  // background-color: transparentize($gray-darker, 0.9);
-  // border-bottom-color: transparent !important;
+  border-radius: 0px;
+  background-color: transparentize(white, 0.1);;
+  border-bottom-color: transparent !important;
+  border-top-color: transparent !important;
+  -webkit-animation-duration:0.3s !important;
   // .navbar-nav a{
   //   color:#fefefe;
   // }

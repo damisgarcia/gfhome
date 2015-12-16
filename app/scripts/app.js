@@ -1,10 +1,24 @@
-angular.module('girafalesHomeApp',['ngAnimate','ui.bootstrap']).run(function(){
+angular.module('girafalesHomeApp',['ngAnimate','ui.bootstrap']).run(function($rootScope){
+  var scrollY = 0
+  $(window).scroll(function(e){
+    e.preventDefault()
+    if(scrollY < e.currentTarget.scrollY){
+      $rootScope.$topNav = false
+      scrollY = e.currentTarget.scrollY
+    }
+    else if(scrollY > (e.currentTarget.scrollY + 75) ){
+      $rootScope.$topNav = true
+      scrollY = e.currentTarget.scrollY
+    }
+    $rootScope.$apply()
+  });
+
   // jQuery for page scrolling feature - requires jQuery Easing plugin
   $(function() {
     $('a.page-scroll').bind('click', function(event) {
       var $anchor = $(this);
       $('html, body').stop().animate({
-          scrollTop: $($anchor.attr('href')).offset().top
+          scrollTop: $($anchor.attr('href')).offset().top - 50
       }, 1500, 'easeInOutExpo');
       event.preventDefault();
     });
@@ -35,5 +49,4 @@ angular.module('girafalesHomeApp',['ngAnimate','ui.bootstrap']).run(function(){
   $("#presentation-modal").on('hidden.bs.modal', function (e) {
     $("#presentation-modal iframe").attr("src", $("#presentation-modal iframe").attr("src"));
   });
-
 })

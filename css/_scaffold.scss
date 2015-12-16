@@ -56,3 +56,20 @@ body {
 h1,h2,h3,h4,h5,h6{
   text-color: $text-color;
 }
+
+// Buttons
+
+.btn{
+  &.btn-primary{
+    background-color: $brand-primary;
+  }
+}
+
+
+// Affix Navbar
+#top.affix {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:60;
+}
