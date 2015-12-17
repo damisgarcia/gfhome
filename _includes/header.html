@@ -1,9 +1,17 @@
-<section id="home">
-  <div style="background:#fff;width:100%;padding-bottom:10%;">
+<section id="about">
     <!-- Navigation -->
+    <!--  ng-class="{'slideInDown affix':$topNav,'slideInUp':!$topNav}"-->
     <header>
-      <nav id="top" class="navbar navbar-default animated" ng-class="{'slideInDown affix':$topNav,'slideInUp':!$topNav}" role="navigation">
-          <div class="container">
+      <nav class="navbar navbar-default" role="navigation">
+        <h3 class="navbar-brand-logo-container">
+          <a href="#">
+            <img class="navbar-brand-logo" alt="{{ site.title }}" width="38" src="img/logo.svg">
+          </a>
+          Girafales
+        </h3>
+      </nav>
+      <nav id="top" class="navbar navbar-default with-shadow" role="navigation">
+          <div>
               <!-- Brand and toggle get grouped for better mobile display -->
               <div class="navbar-header page-scroll">
                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gf-navbar-collapse">
@@ -12,14 +20,11 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                   </button>
-                  <a href="#">
-                    <img class="pull-left margin-right navbar-brand-logo" alt="{{ site.title }}" width="38" src="img/logo.svg">
-                  </a>
               </div>
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="gf-navbar-collapse">
-                  <a class="btn btn-primary navbar-btn navbar-right margin-large-left" href={{ site.url_login }}>Entrar</a>
-                  <ul class="nav navbar-nav navbar-right">
+                  <a class="btn btn-primary navbar-btn navbar-right" href={{ site.url_login }}>Entrar / Criar Conta</a>
+                  <ul class="nav navbar-nav">
                     <li>
                         <a class="page-scroll" href="#about">About</a>
                       </li>
@@ -50,14 +55,16 @@
             </h1>
             <h3>Nulla quis lorem ut libero malesuada feugiat.</h3>
             <br class="margin-large-top margin-large-bottom"/>
+            <ul class="list-inline">
             {% include video-presentation.html %}
+            </ul>
           </div>
         </div>
       </div>
-
+      <a href="https://google.com.br" target="_blank" class="landscape-apple-store">
+        <img src="https://mysplus.com/Content/assets/images/App-Store-Icon.png" width="186"/>
+      </a>
     </div>
     <!-- /.container -->
-
-  </div>
   <!-- /.intro-header -->
 </section>

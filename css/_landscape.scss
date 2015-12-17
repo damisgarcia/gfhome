@@ -6,15 +6,14 @@
 }
 
 .intro-header {
-    padding-top: 5%; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    position: relative;
+    padding-top: 10%; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 15%;
+    margin-bottom: 15px;
     text-align: center;
     color: #f8f8f8;
     background: url(../img/cover.jpg) no-repeat center center;
     background-size: cover;
-    [magnific-popup]{
-      color:#f8f8f8;
-    }
 }
 
 .intro-message {
@@ -23,8 +22,8 @@
 
 .intro-message > h1 {
     margin: 0;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
-    font-size: 5em;
+    text-shadow: 1px 1px 2px $brand-primary;
+    font-size: 6em;
 }
 
 .intro-divider {
@@ -143,4 +142,11 @@ footer {
 
 p.copyright {
     margin: 15px 0 0;
+}
+
+
+.landscape-apple-store{
+  position: absolute;
+  bottom: 10%;
+  right: 25px;
 }

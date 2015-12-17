@@ -63,6 +63,22 @@ h1,h2,h3,h4,h5,h6{
   &.btn-primary{
     background-color: $brand-primary;
   }
+  &.flat{
+    background-color: transparent;
+    color: $gray-darker;
+    border-color: $gray-darker;
+    -webkit-border-radius: 999em;
+    border-radius: 999em;
+    &.inverse{
+      color: white;
+      border-color: white;
+    }
+    &.primary{
+      color: $brand-primary;
+      border-color: $brand-primary;
+      background-color:$gray-darker;
+    }
+  }
 }
 
 

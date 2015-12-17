@@ -26,7 +26,7 @@ angular.module('girafalesHomeApp',['ngAnimate','ui.bootstrap']).run(function($ro
 
   // Highlight the top nav as scrolling occurs
   $('body').scrollspy({
-    target: '.navbar-fixed-top'
+    target: '#top'
   })
 
   // Closes the Responsive Menu on Menu Item Click
@@ -44,6 +44,8 @@ angular.module('girafalesHomeApp',['ngAnimate','ui.bootstrap']).run(function($ro
       }
     }
   });
+
+  $("#top").affix()
 
   // stops video on closing modal
   $("#presentation-modal").on('hidden.bs.modal', function (e) {

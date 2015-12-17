@@ -16,6 +16,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn.btn-primary {
   background-color: #009056; }
+.btn.flat {
+  background-color: transparent;
+  color: #222222;
+  border-color: #222222;
+  -webkit-border-radius: 999em;
+  border-radius: 999em; }
+  .btn.flat.inverse {
+    color: white;
+    border-color: white; }
+  .btn.flat.primary {
+    color: #009056;
+    border-color: #009056;
+    background-color: #222222; }
 
 #top.affix {
   position: fixed;
@@ -103,35 +116,60 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-brand-logo {
   margin: 3px 10px; }
 
+.navbar-brand-logo-container {
+  display: flex;
+  align-items: center;
+  color: rgba(119, 119, 119, 0.5);
+  line-height: 0.6em; }
+  .navbar-brand-logo-container small {
+    font-size: 0.4em; }
+
 header .navbar {
   border-radius: 0px;
-  background-color: rgba(255, 255, 255, 0.9);
   border-bottom-color: transparent !important;
-  border-top-color: transparent !important;
-  -webkit-animation-duration: 0.3s !important; }
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  -webkit-animation-duration: 0.3s !important;
+  margin-bottom: 0px;
+  padding: 0px 20px; }
+  header .navbar.affix.with-shadow {
+    -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3); }
+  header .navbar .navbar-collapse {
+    padding-left: 0px;
+    border: none; }
+  header .navbar .navbar-btn {
+    border-color: #009056;
+    color: #009056;
+    background-color: transparent !important;
+    -webkit-border-radius: 999em;
+    border-radius: 999em; }
+  header .navbar ul li.active > a {
+    background-color: transparent !important;
+    color: #111;
+    border-bottom: 2px solid #009056; }
 
 .lead {
   font-size: 18px;
   font-weight: 400; }
 
 .intro-header {
-  padding-top: 5%;
+  position: relative;
+  padding-top: 10%;
   /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
   padding-bottom: 15%;
+  margin-bottom: 15px;
   text-align: center;
   color: #f8f8f8;
   background: url(../img/cover.jpg) no-repeat center center;
   background-size: cover; }
-  .intro-header [magnific-popup] {
-    color: #f8f8f8; }
 
 .intro-message {
   position: relative; }
 
 .intro-message > h1 {
   margin: 0;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
-  font-size: 5em; }
+  text-shadow: 1px 1px 2px #009056;
+  font-size: 6em; }
 
 .intro-divider {
   width: 400px;
@@ -222,6 +260,11 @@ footer {
 
 p.copyright {
   margin: 15px 0 0; }
+
+.landscape-apple-store {
+  position: absolute;
+  bottom: 10%;
+  right: 25px; }
 
 .carousel-indicators, .carousel-control {
   display: none; }
