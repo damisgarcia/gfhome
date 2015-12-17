@@ -33,7 +33,7 @@
 }
 
 .intro-message > h3 {
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
 }
 
 @media(max-width:$sm) {
@@ -135,18 +135,20 @@
   }
 }
 
-footer {
-  padding: 50px 0;
-  background-color: #f8f8f8;
-}
-
-p.copyright {
-    margin: 15px 0 0;
-}
-
-
 .landscape-apple-store{
   position: absolute;
   bottom: 10%;
   right: 25px;
+}
+
+
+[magnific-popup]{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  .glyphicon, .fa{
+    font-size:2.5rem;
+    margin-right:1.25rem;
+  }
 }

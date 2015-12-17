@@ -40,9 +40,13 @@ header .navbar{
   }
 
   ul{
+    li>a{
+      color:$gray-light;
+    }
     li.active>a{
       background-color: transparent !important;
-      color:#111;
+      color:$gray-darker !important;
+      font-weight: 700;
       border-bottom: 2px solid $brand-primary;
     }
   }

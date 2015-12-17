@@ -22,6 +22,7 @@ a {
 
 // Typography
 $font-family-sans-serif:  "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+$font-family-sans-serif-thin:  "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif;
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base:        $font-family-sans-serif;
@@ -47,14 +48,21 @@ $headings-color:          inherit;
 
 
 body {
-  font-family: $font-family-sans-serif;
-  font-weight: 700;
+  font-family: $font-family-sans-serif-thin;
   background-color: $body-bg;
   text-color: $text-color;
+  font-weight: 300;
 }
 
 h1,h2,h3,h4,h5,h6{
+  font-family: $font-family-sans-serif;
   text-color: $text-color;
+}
+
+
+blockquote{
+  border-left:none;
+  font-size: 19px;
 }
 
 // Buttons
@@ -74,9 +82,9 @@ h1,h2,h3,h4,h5,h6{
       border-color: white;
     }
     &.primary{
-      color: $brand-primary;
+      color: lighten($brand-primary,60);
       border-color: $brand-primary;
-      background-color:$gray-darker;
+      background-color: transparentize($brand-primary,0.8);
     }
   }
 }

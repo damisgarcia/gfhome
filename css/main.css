@@ -6,13 +6,18 @@ a {
     text-decoration: underline; }
 
 body {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #fff;
-  text-color: #222222; }
+  text-color: #222222;
+  font-weight: 300; }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-color: #222222; }
+
+blockquote {
+  border-left: none;
+  font-size: 19px; }
 
 .btn.btn-primary {
   background-color: #009056; }
@@ -26,9 +31,9 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
     border-color: white; }
   .btn.flat.primary {
-    color: #009056;
+    color: #c3ffe7;
     border-color: #009056;
-    background-color: #222222; }
+    background-color: rgba(0, 144, 86, 0.2); }
 
 #top.affix {
   position: fixed;
@@ -62,6 +67,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .primary-color {
   color: #009056; }
+
+.thin {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300; }
 
 /**
  * Fade-zoom animation for first dialog
@@ -143,9 +152,12 @@ header .navbar {
     background-color: transparent !important;
     -webkit-border-radius: 999em;
     border-radius: 999em; }
+  header .navbar ul li > a {
+    color: #777777; }
   header .navbar ul li.active > a {
     background-color: transparent !important;
-    color: #111;
+    color: #222222 !important;
+    font-weight: 700;
     border-bottom: 2px solid #009056; }
 
 .lead {
@@ -177,7 +189,7 @@ header .navbar {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
 
 .intro-message > h3 {
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6); }
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); }
 
 @media (max-width: 768px) {
   .intro-message {
@@ -254,19 +266,35 @@ header .navbar {
 
   ul.banner-social-buttons > li:last-child {
     margin-bottom: 0; } }
-footer {
-  padding: 50px 0;
-  background-color: #f8f8f8; }
-
-p.copyright {
-  margin: 15px 0 0; }
-
 .landscape-apple-store {
   position: absolute;
   bottom: 10%;
   right: 25px; }
 
+[magnific-popup] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase; }
+  [magnific-popup] .glyphicon, [magnific-popup] .fa {
+    font-size: 2.5rem;
+    margin-right: 1.25rem; }
+
 .carousel-indicators, .carousel-control {
   display: none; }
+
+footer {
+  color: white;
+  padding: 50px 0;
+  background-color: #34495E;
+  min-height: 400px; }
+  footer a {
+    color: #009056; }
+  footer .list-inline a {
+    color: white; }
+
+p.copyright {
+  color: white;
+  margin: 15px 0 0; }
 
 /*# sourceMappingURL=main.css.map */
