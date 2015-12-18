@@ -40,7 +40,7 @@ angular.module('girafalesHomeApp')
             youtube: {
               index: 'youtube.com/',
               id: 'v=',
-              src: '//www.youtube.com/embed/%id%?modestbranding=0&rel=0&showinfo=0&autoplay=0'
+              src: '//www.youtube.com/embed/%id%?modestbranding=0&rel=0&showinfo=0&autoplay=0&vq=hd720'
             }
           }
 
