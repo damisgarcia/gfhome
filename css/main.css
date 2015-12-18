@@ -72,6 +72,9 @@ blockquote {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300; }
 
+.carousel-indicators, .carousel-control {
+  display: none; }
+
 /**
  * Fade-zoom animation for first dialog
  */
@@ -160,16 +163,11 @@ header .navbar {
     font-weight: 700;
     border-bottom: 2px solid #009056; }
 
-.lead {
-  font-size: 18px;
-  font-weight: 400; }
-
 .intro-header {
   position: relative;
   padding-top: 10%;
   /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-  padding-bottom: 15%;
-  margin-bottom: 15px;
+  padding-bottom: 10%;
   text-align: center;
   color: #f8f8f8;
   background: url(../img/cover.jpg) no-repeat center center;
@@ -180,16 +178,20 @@ header .navbar {
 
 .intro-message > h1 {
   margin: 0;
-  text-shadow: 1px 1px 2px #009056;
-  font-size: 6em; }
-
-.intro-divider {
-  width: 400px;
-  border-top: 1px solid #f8f8f8;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+  font-size: 3em;
+  padding-left: 3em;
+  padding-right: 3em;
+  color: #fefefe; }
+  .intro-message > h1 b {
+    color: white; }
 
 .intro-message > h3 {
+  font-size: 1.2em;
+  padding: 1em 4em;
+  color: #efefef;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); }
+  .intro-message > h3 b {
+    color: white; }
 
 @media (max-width: 768px) {
   .intro-message {
@@ -213,23 +215,6 @@ header .navbar {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 2px; }
-
-.content-section-a {
-  padding: 50px 0;
-  background-color: #f8f8f8; }
-
-.content-section-b {
-  padding: 50px 0;
-  border-top: 1px solid #e7e7e7;
-  border-bottom: 1px solid #e7e7e7; }
-
-.section-heading {
-  margin-bottom: 30px; }
-
-.section-heading-spacer {
-  float: left;
-  width: 200px;
-  border-top: 3px solid #e7e7e7; }
 
 .banner {
   padding: 100px 0;
@@ -280,8 +265,59 @@ header .navbar {
     font-size: 2.5rem;
     margin-right: 1.25rem; }
 
-.carousel-indicators, .carousel-control {
-  display: none; }
+.gf-nav-container {
+  background-color: #f8f8f8;
+  font-size: 1.2em;
+  font-weight: 400;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center; }
+  .gf-nav-container li {
+    margin: 2px 2px;
+    border: 1px solid #009056; }
+  .gf-nav-container li > a {
+    background-color: white;
+    color: #314559;
+    border-radius: 0px;
+    border: none;
+    margin: 0px; }
+  .gf-nav-container li.active > a {
+    border: none; }
+    .gf-nav-container li.active > a:hover, .gf-nav-container li.active > a:active, .gf-nav-container li.active > a:visited, .gf-nav-container li.active > a:focus {
+      background-color: #009056;
+      color: white;
+      border: none; }
+
+.section-a, .section-b {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.section-a {
+  padding: 2rem 0; }
+
+.section-b {
+  padding: 2rem 0;
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+  background-color: #f8f8f8; }
+
+.section-heading {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 36px;
+  margin-top: 8rem;
+  margin-bottom: 3rem;
+  color: #00a965; }
+
+.section-heading-spacer {
+  float: left;
+  width: 200px;
+  border-top: 3px solid #e7e7e7; }
+
+.lead {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: left; }
 
 footer {
   color: white;

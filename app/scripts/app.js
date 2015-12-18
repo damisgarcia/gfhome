@@ -45,7 +45,13 @@ angular.module('girafalesHomeApp',['ngAnimate','ui.bootstrap']).run(function($ro
     }
   });
 
-  $("#top").affix()
+  // console.log($("#services").offset().top)
+
+  $("#top").affix({
+    offset:{
+      top: $("#services").offset().top
+    }
+  })
 
   // stops video on closing modal
   $("#presentation-modal").on('hidden.bs.modal', function (e) {

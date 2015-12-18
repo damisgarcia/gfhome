@@ -13,17 +13,19 @@ angular.module('girafalesHomeApp')
 
     self.carouselInterval = false
     self.noWrapSlides = true
-    self.slides = [
-      {templateUrl:"app/templates/service-1.html"},
-      {templateUrl:"app/templates/service-2.html"},
-      {templateUrl:"app/templates/service-3.html"},
-      {templateUrl:"app/templates/service-4.html"},
-      {templateUrl:"app/templates/service-5.html"}
-    ]
+    self.slides = {
+      students: { active: true },
+      teachers: { active: false }
+    }
+    self.toStudents = function(e){
+      e.preventDefault()
+      self.slides.students.active = true
+      self.slides.teachers.active = false
+    }
 
-    this.toSlide = function(index,$event){
-      $event.preventDefault()
-      angular.forEach(this.slides, function(slide){   slide.active = false  })
-      this.slides[index].active = true
+    self.toTeachers = function(e){
+      e.preventDefault()
+      self.slides.students.active = false
+      self.slides.teachers.active = true
     }
   });
