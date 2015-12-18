@@ -282,8 +282,9 @@ header .navbar {
     border: none;
     margin: 0px; }
   .gf-nav-container li.active > a {
+    background-color: #009056;
     border: none; }
-    .gf-nav-container li.active > a:hover, .gf-nav-container li.active > a:active, .gf-nav-container li.active > a:visited, .gf-nav-container li.active > a:focus {
+    .gf-nav-container li.active > a:link, .gf-nav-container li.active > a:hover, .gf-nav-container li.active > a:active, .gf-nav-container li.active > a:visited, .gf-nav-container li.active > a:focus {
       background-color: #009056;
       color: white;
       border: none; }
