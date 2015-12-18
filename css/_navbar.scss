@@ -1,0 +1,53 @@
+// @autor: Damis Garcia
+.navbar-brand-logo{
+  margin: 3px 10px;
+}
+.navbar-brand-logo-container{
+  display:flex;
+  align-items:center;
+  color: transparentize($gray-light,0.5);
+  line-height: 0.6em;
+  small{
+    font-size: 0.4em;
+  }
+}
+
+
+header .navbar{
+  border-radius: 0px;
+  border-bottom-color: transparent !important;
+  background-color: transparentize(white, 0.1);
+  border:none;
+  -webkit-animation-duration:0.3s !important;
+  margin-bottom:0px;
+  padding:0px 20px;
+
+  &.affix.with-shadow{
+    -webkit-box-shadow: 0 0 8px 0 rgba(0,0,0,.3);
+  }
+
+  .navbar-collapse{
+    padding-left: 0px;
+    border:none;
+  }
+
+  .navbar-btn{
+    border-color: $brand-primary;
+    color:$brand-primary;
+    background-color: transparent !important;
+    -webkit-border-radius: 999em;
+    border-radius: 999em;
+  }
+
+  ul{
+    li>a{
+      color:$gray-light;
+    }
+    li.active>a{
+      background-color: transparent !important;
+      color:$gray-darker !important;
+      font-weight: 700;
+      border-bottom: 2px solid $brand-primary;
+    }
+  }
+}

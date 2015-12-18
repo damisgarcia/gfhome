@@ -1,0 +1,21 @@
+<section id="services" class="margin-bottom">
+  <div class="gf-nav-container margin-bottom">
+    <ul class="nav nav-tabs nav-pills" role="tablist">
+      <li ng-click="home.toStudents($event)" ng-class="{'active':home.slides.students.active}">
+        <a href="#!">Para alunos</a>
+      </li>
+      <li ng-click="home.toTeachers($event)" ng-class="{'active':home.slides.teachers.active}">
+        <a href="#!">Para professsores</a>
+      </li>
+    </ul>
+  </div>
+  <uib-carousel interval="home.carouselInterval" no-wrap="home.noWrapSlides">
+  <!-- Page Content -->
+    <uib-slide active="home.slides.students.active">
+      {% include templates/students.html  %}
+    </uib-slide>
+    <uib-slide active="home.slides.teachers.active">
+      {% include templates/teachers.html %}
+    </uib-slide>
+  </uib-carousel>
+</section>

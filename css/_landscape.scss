@@ -1,0 +1,133 @@
+// @autor Damis Garcia
+
+.intro-header {
+    position: relative;
+    padding-top: 10%; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 10%;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../img/cover.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.intro-message {
+    position: relative;
+}
+
+.intro-message > h1 {
+    margin: 0;
+    font-size: 3em;
+    padding-left: 3em;
+    padding-right: 3em;
+    color:#fefefe;
+    b{
+      color:white;
+    }
+}
+
+
+.intro-message > h3 {
+  font-size: 1.2em;
+  padding:1em 4em;
+  color:#efefef;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+  b{
+    color:white;
+  }
+}
+
+@media(max-width:$sm) {
+  .intro-message {
+      padding-bottom: 15%;
+  }
+
+  .intro-message > h1 {
+      font-size: 3em;
+  }
+
+  ul.intro-social-buttons > li {
+      display: block;
+      margin-bottom: 20px;
+      padding: 0;
+  }
+
+  ul.intro-social-buttons > li:last-child {
+      margin-bottom: 0;
+  }
+
+  .intro-divider {
+      width: 100%;
+  }
+}
+
+.network-name {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.banner {
+    padding: 100px 0;
+    color: #f8f8f8;
+    background: url(../img/banner-bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.banner h2 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 3em;
+}
+
+.banner ul {
+    margin-bottom: 0;
+}
+
+.banner-social-buttons {
+    float: right;
+    margin-top: 0;
+}
+
+@media(max-width:$lg) {
+  ul.banner-social-buttons {
+    float: left;
+    margin-top: 15px;
+  }
+}
+
+@media(max-width:$sm) {
+  .banner h2 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 3em;
+  }
+
+  ul.banner-social-buttons > li {
+      display: block;
+      margin-bottom: 20px;
+      padding: 0;
+  }
+
+  ul.banner-social-buttons > li:last-child {
+      margin-bottom: 0;
+  }
+}
+
+.landscape-apple-store{
+  position: absolute;
+  bottom: 10%;
+  right: 25px;
+}
+
+
+[magnific-popup]{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  .glyphicon, .fa{
+    font-size:2.5rem;
+    margin-right:1.25rem;
+  }
+}

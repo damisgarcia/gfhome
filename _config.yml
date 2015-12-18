@@ -1,0 +1,41 @@
+# ----------------------- #
+#      Main Configs       #
+# ----------------------- #
+
+url: https://girafales.com
+url_login: http://localhost:3000/login
+title: Girafales
+email: wedson.sousa.lima@gmail.com
+author: Wedson Lima
+description: Reunimos os melhores professores para lhe ajudar na sua tão sonhada aprovação em um concurso público.
+keywords: aulas online para concursos publicos, cursos online para concursos publicos, material online para concursos publicos, girafales
+copyright: 'Copyright &copy; 2015 Girafales. All Rights Reserved.'
+credits: 'Credits: Landing Page is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com/">Start Bootstrap</a>.'
+
+# ----------------------- #
+#    Jekyll & Plugins     #
+# ----------------------- #
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+# ----------------------- #
+#   3rd Party Settings    #
+# ----------------------- #
+
+social:
+  # - title: facebook
+  #   url: https://facebook.com/redegirafales
+  # - title: twitter
+  #   url: https://twitter.com/redegirafales
+  # - title: github
+  #   url: https://github.com/IronSummitMedia/startbootstrap
+  # - title: linkedin
+  #   url:
+
+# ----------------------- #
+#       DEPLOY            #
+# ----------------------- #
+
+gems: ['kramdown','jekyll-sass-converter']
+exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'Procfile', 'Rakefile']

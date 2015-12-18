@@ -1,0 +1,64 @@
+  <section id="about">
+    <header>
+      <nav class="navbar navbar-default" role="navigation">
+        <h3 class="navbar-brand-logo-container">
+          <a href="#">
+            <img class="navbar-brand-logo" alt="{{ site.title }}" width="38" src="img/logo.svg">
+          </a>
+          Girafales
+        </h3>
+      </nav>
+      <nav id="top" class="navbar navbar-default with-shadow" role="navigation">
+          <div>
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header page-scroll">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gf-navbar-collapse">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+              </div>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="gf-navbar-collapse">
+                  <a class="btn btn-primary navbar-btn navbar-right" href={{ site.url_login }}>Entrar / Criar Conta</a>
+                  <ul class="nav navbar-nav">
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                      </li>
+                      <li>
+                        <a class="page-scroll" href="#services">Services</a>
+                      </li>
+                      <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                      </li>
+                  </ul>
+              </div>
+              <!-- /.navbar-collapse -->
+          </div>
+          <!-- /.container -->
+      </nav>
+    </header>
+  </div>
+<!-- Header -->
+  <div class="intro-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="intro-message">
+            <h1> Reunimos <b>grandes professores</b> para garantir a sua <b>aprovação</b> em um <b>concurso público.</b> </h1>
+            <h3>Girafales é uma plataforma educativa que reúne alunos e professores em um ambiente ideal para quem estuda para Concurso Público. Onde cada professor tem a própria página e se relaciona <b>diretamente</b> com os alunos. Criando cursos em diferentes formatos, como: <b>Vídeos, PDF e Exercícios.</b></h3>
+            <br class="margin-large-top margin-large-bottom"/>
+            <ul class="list-inline">
+            {% include video-presentation.html %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a href="https://google.com.br" target="_blank" class="btn btn-sm flat inverse landscape-apple-store">
+        <img src="img/icons/apple-store-icon.svg" width="32"/> Getting on Apple Sore
+      </a>
+    </div>
+    <!-- /.container -->
+  <!-- /.intro-header -->
+</section>
