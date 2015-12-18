@@ -1,6 +1,6 @@
 // @autor: Damis Garcia
 
-.gf-nav-container{
+.gf-nav-container {
   background-color: #f8f8f8;
   // padding-top: 0.75em;
   font-size: 1.2em;
@@ -20,7 +20,8 @@
     margin: 0px;
   }
   li.active>a{
-    &:hover,&:active,&:visited,&:focus{
+    background-color: $brand-primary;
+    &:link, &:hover,&:active,&:visited,&:focus{
       background-color: $brand-primary;
       color: white;
       border:none;
