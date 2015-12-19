@@ -2,6 +2,7 @@
 .navbar-brand-logo{
   margin: 3px 10px;
 }
+
 .navbar-brand-logo-container{
   display:flex;
   align-items:center;
@@ -12,6 +13,11 @@
   }
 }
 
+@media (max-width:$sm){
+  // .navbar-brand-logo-container{
+  //   margin: 10px 10px;
+  // }
+}
 
 header .navbar{
   border-radius: 0px;
@@ -41,13 +47,31 @@ header .navbar{
 
   ul{
     li>a{
+      background-color: transparent !important;
       color:$gray-light;
     }
-    li.active>a{
+    li.active:not(.force-unable)>a{
       background-color: transparent !important;
       color:$gray-darker !important;
       font-weight: 700;
-      border-bottom: 2px solid $brand-primary;
+      border-bottom: 3px solid $brand-primary;
     }
+  }
+}
+
+@media(max-width:$sm){
+  #top{
+    display: flex;
+    align-items: flex-end;
+    .collapse{
+      display: block !important;
+      .navbar-nav{
+        display: flex;
+        margin:0px -15px;
+      }
+    }
+  }
+  .gf-sigin{
+    display: none;
   }
 }

@@ -38,11 +38,18 @@
 
 @media(max-width:$sm) {
   .intro-message {
-      padding-bottom: 15%;
+    padding-top: 8.5%;
+    padding-bottom: 15%;
   }
 
   .intro-message > h1 {
-      font-size: 3em;
+      font-size: 1.2em;
+      padding-left: 1em;
+      padding-right: 1em;
+  }
+
+  .intro-message > h3{
+    display: none;
   }
 
   ul.intro-social-buttons > li {
@@ -89,6 +96,35 @@
     margin-top: 0;
 }
 
+[magnific-popup]{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  .glyphicon, .fa{
+    font-size:2.5rem;
+    margin-right:1.25rem;
+  }
+}
+@media (max-width:$sm){
+  [magnific-popup]{
+    font-size: 0.8em;
+    padding: 7.5px;
+    .glyphicon, .fa{
+      font-size: 1.9rem;
+    }
+  }
+
+  .landscape-apple-store{
+    display: none;
+    font-size: 0.6em;
+  }
+  .landscape-apple-store-icon{
+    width: 22px;
+  }
+}
+
 @media(max-width:$lg) {
   ul.banner-social-buttons {
     float: left;
@@ -118,16 +154,4 @@
   position: absolute;
   bottom: 10%;
   right: 25px;
-}
-
-
-[magnific-popup]{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-  .glyphicon, .fa{
-    font-size:2.5rem;
-    margin-right:1.25rem;
-  }
 }
