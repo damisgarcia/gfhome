@@ -35,6 +35,16 @@ blockquote {
     border-color: #009056;
     background-color: rgba(0, 144, 86, 0.2); }
 
+.form-control.flat {
+  background-color: transparent;
+  color: #222222;
+  border-color: #222222;
+  -webkit-border-radius: 999em;
+  border-radius: 999em; }
+.form-control.inverse {
+  color: white;
+  border-color: white; }
+
 #top.affix {
   position: fixed;
   top: 0;
@@ -253,28 +263,26 @@ header .navbar {
   float: right;
   margin-top: 0; }
 
-[magnific-popup] {
+.intro-message [magnific-popup] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
   font-size: 1.4em; }
-  [magnific-popup] .glyphicon, [magnific-popup] .fa {
+  .intro-message [magnific-popup] .glyphicon, .intro-message [magnific-popup] .fa {
     font-size: 2.5rem;
     margin-right: 1.25rem; }
 
 @media (max-width: 750px) {
-  [magnific-popup] {
+  .intro-message [magnific-popup] {
     font-size: 0.8em;
     padding: 7.5px; }
-    [magnific-popup] .glyphicon, [magnific-popup] .fa {
+    .intro-message [magnific-popup] .glyphicon, .intro-message [magnific-popup] .fa {
       font-size: 1.9rem; }
-
-  .landscape-apple-store {
+  .intro-message .landscape-apple-store {
     display: none;
     font-size: 0.6em; }
-
-  .landscape-apple-store-icon {
+  .intro-message .landscape-apple-store-icon {
     width: 22px; } }
 @media (max-width: 1170px) {
   ul.banner-social-buttons {
@@ -368,6 +376,29 @@ header .navbar {
 
   .lead {
     font-size: 14px; } }
+#signup_students, #signup_teachers {
+  background: #283849;
+  color: white;
+  padding: 20px 30px;
+  text-align: left;
+  max-width: 800px;
+  margin: 40px auto;
+  position: relative; }
+  #signup_students h1, #signup_teachers h1 {
+    color: rgba(255, 255, 255, 0.4); }
+  #signup_students .form-control, #signup_teachers .form-control {
+    font-size: 2rem; }
+    #signup_students .form-control.flat, #signup_teachers .form-control.flat {
+      color: white;
+      border-color: rgba(255, 255, 255, 0.5) !important; }
+  #signup_students .form-group.has-error .form-control.ng-invalid-add, #signup_teachers .form-group.has-error .form-control.ng-invalid-add {
+    border-color: rgba(255, 0, 0, 0.5) !important; }
+  #signup_students .btn.flat.primary, #signup_teachers .btn.flat.primary {
+    color: white;
+    background-color: #009056 !important; }
+  #signup_students .mfp-close, #signup_teachers .mfp-close {
+    color: white; }
+
 footer {
   color: white;
   padding: 50px 0;
@@ -379,7 +410,6 @@ footer {
     color: white; }
 
 p.copyright {
-  color: white;
-  margin: 15px 0 0; }
+  color: white; }
 
 /*# sourceMappingURL=main.css.map */

@@ -95,33 +95,36 @@
     float: right;
     margin-top: 0;
 }
-
-[magnific-popup]{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-  font-size: 1.4em;
-  .glyphicon, .fa{
-    font-size:2.5rem;
-    margin-right:1.25rem;
+.intro-message{
+  [magnific-popup]{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    .glyphicon, .fa{
+      font-size:2.5rem;
+      margin-right:1.25rem;
+    }
   }
 }
 @media (max-width:$sm){
-  [magnific-popup]{
-    font-size: 0.8em;
-    padding: 7.5px;
-    .glyphicon, .fa{
-      font-size: 1.9rem;
+  .intro-message{
+    [magnific-popup]{
+      font-size: 0.8em;
+      padding: 7.5px;
+      .glyphicon, .fa{
+        font-size: 1.9rem;
+      }
     }
-  }
 
-  .landscape-apple-store{
-    display: none;
-    font-size: 0.6em;
-  }
-  .landscape-apple-store-icon{
-    width: 22px;
+    .landscape-apple-store{
+      display: none;
+      font-size: 0.6em;
+    }
+    .landscape-apple-store-icon{
+      width: 22px;
+    }
   }
 }
 

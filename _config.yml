@@ -3,7 +3,8 @@
 # ----------------------- #
 
 url: https://girafales.com
-url_login: http://localhost:3000/login
+url_login: https://staging.girafales.com/login
+url_new_student: https://staging.girafales.com/student/new
 title: Girafales
 email: wedson.sousa.lima@gmail.com
 author: Wedson Lima

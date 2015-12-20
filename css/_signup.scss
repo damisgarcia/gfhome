@@ -1,0 +1,29 @@
+#signup_students,#signup_teachers{
+  background: $brand-inverse;
+  color:white;
+	padding: 20px 30px;
+	text-align: left;
+	max-width: 800px;
+	margin: 40px auto;
+	position: relative;
+  h1{
+    color:transparentize(white,0.6);
+  }
+  .form-control{
+    font-size: 2rem;
+    &.flat{
+      color:white;
+      border-color: transparentize(white,0.5) !important;
+    }
+  }
+  .form-group.has-error{
+    .form-control.ng-invalid-add{ border-color: transparentize(red,0.5) !important; }
+  }
+  .btn.flat.primary{
+    color:white;
+    background-color: $brand-primary !important;
+  }
+  .mfp-close{
+    color:white;
+  }
+}
