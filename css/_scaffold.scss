@@ -89,6 +89,20 @@ blockquote{
   }
 }
 
+.form-control{
+  &.flat{
+    background-color: transparent;
+    color: $gray-darker;
+    border-color: $gray-darker;
+    -webkit-border-radius: 999em;
+    border-radius: 999em;
+  }
+  &.inverse{
+    color: white;
+    border-color: white;
+  }
+}
+
 
 // Affix Navbar
 #top.affix {

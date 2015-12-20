@@ -1,0 +1,17 @@
+<div class="container zoom-anim-dialog mfp-hide" id="signup_students">
+  <div class="col-xs-12">
+      <div class="form-area">
+        <form name="signup_students" ng-submit="home.submit_signup_students(signup_students)" novalidate>
+            <h1>Informe seus Dados</h1>
+            <br style="clear:both">
+    				<div class="form-group" ng-class="{'has-error':signup_students.name.$invalid}">
+  						<input type="text" ng-model="home.signup.name" class="form-control flat inverse" name="name" placeholder="Nome" required>
+  					</div>
+  					<div class="form-group" ng-class="{'has-error':signup_students.email.$invalid}">
+  						<input type="email" ng-model="home.signup_students.email" class="form-control flat inverse" name="email" placeholder="Email" required>
+  					</div>
+            <button type="submit" class="btn btn-lg btn-primary pull-right flat primary">Prosseguir</button>
+        </form>
+      </div>
+  </div>
+</div>

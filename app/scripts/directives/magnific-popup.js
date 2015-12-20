@@ -51,7 +51,6 @@ angular.module('girafalesHomeApp')
             $(magnificContainer).appendTo($("body"))
           });
 
-        console.log(config)
         $(element).magnificPopup(config)
       }
     };
