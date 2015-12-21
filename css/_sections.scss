@@ -39,13 +39,17 @@
 }
 
 .section-c {
-  padding: 30px 0;
+  .content{ padding: 30px auto;  }
   background-color: lighten(#34495E, 10);
   .section-heading{
     color:white;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .lead{
     color: transparentize(white,0.1);
+    padding-left: 15px;
+    padding-right: 15px;
     b{color:white;}
     .lets-go{
       margin: 15px auto;

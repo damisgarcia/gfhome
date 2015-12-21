@@ -9,15 +9,21 @@
   h1{
     color:transparentize(white,0.6);
   }
+  h2,h3,h4,h5{
+    color:transparentize(white,0.2);
+  }
   .form-control{
     font-size: 2rem;
     &.flat{
       color:white;
-      border-color: transparentize(white,0.5) !important;
+      border-color: transparentize(white,0.5);
     }
   }
   .form-group.has-error{
-    .form-control.ng-invalid-add{ border-color: transparentize(red,0.5) !important; }
+    .form-control.flat{
+      color: transparentize(red,0.2) !important;
+      border-color: transparentize(red,0.5) !important;
+     }
   }
   .btn.flat.primary{
     color:white;
@@ -25,5 +31,13 @@
   }
   .mfp-close{
     color:white;
+  }
+}
+
+@media (max-width:$sm){
+  #signup_students,#signup_teachers{
+    h1{
+      font-size: 2rem;
+    }
   }
 }

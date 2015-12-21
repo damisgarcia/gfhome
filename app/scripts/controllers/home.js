@@ -35,10 +35,15 @@ angular.module('girafalesHomeApp')
       },300)
     }
 
+    self.patterns = {
+      personName: { regex: /^[a-zA-Z\s]*$/, message: "Apenas letras de A-Z são permitídas" }
+    }
+
     self.signup_students = { name:null, email:null }
     self.signup_teachers = { name:null, email:null }
 
     self.submit_signup_students = function(form){
+      console.log(form.name)
       if(form.$valid){
         var params = ["name="+self.signup_students.name, "email="+self.signup_students.email]
         window.location.href = "https://staging.girafales.com/student/new?" + params.join("&")
