@@ -35,6 +35,16 @@ blockquote {
     border-color: #009056;
     background-color: rgba(0, 144, 86, 0.2); }
 
+.form-control.flat {
+  background-color: transparent;
+  color: #222222;
+  border-color: #222222;
+  -webkit-border-radius: 999em;
+  border-radius: 999em; }
+.form-control.inverse {
+  color: white;
+  border-color: white; }
+
 #top.affix {
   position: fixed;
   top: 0;
@@ -156,13 +166,26 @@ header .navbar {
     -webkit-border-radius: 999em;
     border-radius: 999em; }
   header .navbar ul li > a {
+    background-color: transparent !important;
     color: #777777; }
-  header .navbar ul li.active > a {
+  header .navbar ul li.active:not(.force-unable) > a {
     background-color: transparent !important;
     color: #222222 !important;
     font-weight: 700;
-    border-bottom: 2px solid #009056; }
+    border-bottom: 3px solid #009056; }
 
+@media (max-width: 750px) {
+  #top {
+    display: flex;
+    align-items: flex-end; }
+    #top .collapse {
+      display: block !important; }
+      #top .collapse .navbar-nav {
+        display: flex;
+        margin: 0px -15px; }
+
+  .gf-sigin {
+    display: none; } }
 .intro-header {
   position: relative;
   padding-top: 10%;
@@ -193,12 +216,18 @@ header .navbar {
   .intro-message > h3 b {
     color: white; }
 
-@media (max-width: 768px) {
+@media (max-width: 750px) {
   .intro-message {
+    padding-top: 8.5%;
     padding-bottom: 15%; }
 
   .intro-message > h1 {
-    font-size: 3em; }
+    font-size: 1.2em;
+    padding-left: 1em;
+    padding-right: 1em; }
+
+  .intro-message > h3 {
+    display: none; }
 
   ul.intro-social-buttons > li {
     display: block;
@@ -234,11 +263,32 @@ header .navbar {
   float: right;
   margin-top: 0; }
 
-@media (max-width: 1200px) {
+.intro-message [magnific-popup] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 1.4em; }
+  .intro-message [magnific-popup] .glyphicon, .intro-message [magnific-popup] .fa {
+    font-size: 2.5rem;
+    margin-right: 1.25rem; }
+
+@media (max-width: 750px) {
+  .intro-message [magnific-popup] {
+    font-size: 0.8em;
+    padding: 7.5px; }
+    .intro-message [magnific-popup] .glyphicon, .intro-message [magnific-popup] .fa {
+      font-size: 1.9rem; }
+  .intro-message .landscape-apple-store {
+    display: none;
+    font-size: 0.6em; }
+  .intro-message .landscape-apple-store-icon {
+    width: 22px; } }
+@media (max-width: 1170px) {
   ul.banner-social-buttons {
     float: left;
     margin-top: 15px; } }
-@media (max-width: 768px) {
+@media (max-width: 750px) {
   .banner h2 {
     margin: 0;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
@@ -256,40 +306,22 @@ header .navbar {
   bottom: 10%;
   right: 25px; }
 
-[magnific-popup] {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase; }
-  [magnific-popup] .glyphicon, [magnific-popup] .fa {
-    font-size: 2.5rem;
-    margin-right: 1.25rem; }
-
 .gf-nav-container {
   background-color: #f8f8f8;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.2em;
-  font-weight: 400;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center; }
-  .gf-nav-container li {
-    margin: 2px 2px;
-    border: 1px solid #009056; }
-  .gf-nav-container li > a {
-    background-color: white;
-    color: #314559;
-    border-radius: 0px;
-    border: none;
-    margin: 0px; }
-  .gf-nav-container li.active > a {
-    background-color: #009056;
-    border: none; }
-    .gf-nav-container li.active > a:link, .gf-nav-container li.active > a:hover, .gf-nav-container li.active > a:active, .gf-nav-container li.active > a:visited, .gf-nav-container li.active > a:focus {
-      background-color: #009056;
-      color: white;
-      border: none; }
+  font-weight: 600;
+  margin: 0.55rem; }
+  .gf-nav-container ul {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%; }
 
-.section-a, .section-b {
+@media (max-width: 750px) {
+  .gf-nav-container li a {
+    font-size: 1rem; } }
+.section-a, .section-b, .section-c {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .section-a {
@@ -301,6 +333,27 @@ header .navbar {
   border-bottom: 1px solid #e7e7e7;
   background-color: #f8f8f8; }
 
+.section-c {
+  background-color: #46637f; }
+  .section-c .content {
+    padding: 30px auto; }
+  .section-c .section-heading {
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px; }
+  .section-c .lead {
+    color: rgba(255, 255, 255, 0.9);
+    padding-left: 15px;
+    padding-right: 15px; }
+    .section-c .lead b {
+      color: white; }
+    .section-c .lead .lets-go {
+      margin: 15px auto; }
+    .section-c .lead .flat {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #283849;
+      border-color: white; }
+
 .section-heading {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -309,17 +362,54 @@ header .navbar {
   margin-bottom: 3rem;
   color: #00a965; }
 
-.section-heading-spacer {
-  float: left;
-  width: 200px;
-  border-top: 3px solid #e7e7e7; }
-
 .lead {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-weight: 300;
-  text-align: left; }
+  text-align: left;
+  margin: auto 15px; }
 
+@media (max-width: 750px) {
+  .section-heading {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 24px; }
+
+  .lead, .section-heading {
+    margin-left: 15px;
+    margin-right: 15px; }
+
+  .lead {
+    font-size: 14px; } }
+#signup_students, #signup_teachers {
+  background: #283849;
+  color: white;
+  padding: 20px 30px;
+  text-align: left;
+  max-width: 800px;
+  margin: 40px auto;
+  position: relative; }
+  #signup_students h1, #signup_teachers h1 {
+    color: rgba(255, 255, 255, 0.4); }
+  #signup_students h2, #signup_students h3, #signup_students h4, #signup_students h5, #signup_teachers h2, #signup_teachers h3, #signup_teachers h4, #signup_teachers h5 {
+    color: rgba(255, 255, 255, 0.8); }
+  #signup_students .form-control, #signup_teachers .form-control {
+    font-size: 2rem; }
+    #signup_students .form-control.flat, #signup_teachers .form-control.flat {
+      color: white;
+      border-color: rgba(255, 255, 255, 0.5); }
+  #signup_students .form-group.has-error .form-control.flat, #signup_teachers .form-group.has-error .form-control.flat {
+    color: rgba(255, 0, 0, 0.8) !important;
+    border-color: rgba(255, 0, 0, 0.5) !important; }
+  #signup_students .btn.flat.primary, #signup_teachers .btn.flat.primary {
+    color: white;
+    background-color: #009056 !important; }
+  #signup_students .mfp-close, #signup_teachers .mfp-close {
+    color: white; }
+
+@media (max-width: 750px) {
+  #signup_students h1, #signup_teachers h1 {
+    font-size: 2rem; } }
 footer {
   color: white;
   padding: 50px 0;
@@ -331,7 +421,6 @@ footer {
     color: white; }
 
 p.copyright {
-  color: white;
-  margin: 15px 0 0; }
+  color: white; }
 
 /*# sourceMappingURL=main.css.map */
