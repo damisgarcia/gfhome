@@ -42,19 +42,19 @@
           margin-bottom: 10px;
         }
         &.students::before{
-          background-image: url("/img/icons/student.svg");
+          background-image: url("../img/icons/student.svg");
         }
         &.teachers::before{
-          background-image: url("/img/icons/professor.svg");
+          background-image: url("../img/icons/professor.svg");
         }
       }
       &.active{
         .gf-icon{
           &.students::before{
-            background-image: url("/img/icons/student-b.svg");
+            background-image: url("../img/icons/student-b.svg");
           }
           &.teachers::before{
-            background-image: url("/img/icons/professor-b.svg");
+            background-image: url("../img/icons/professor-b.svg");
           }
         }
 

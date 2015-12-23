@@ -349,13 +349,13 @@ header .navbar {
       margin: auto;
       margin-bottom: 10px; }
     .gf-nav-container ul.nav-tabs li .gf-icon.students::before {
-      background-image: url("/img/icons/student.svg"); }
+      background-image: url("../img/icons/student.svg"); }
     .gf-nav-container ul.nav-tabs li .gf-icon.teachers::before {
-      background-image: url("/img/icons/professor.svg"); }
+      background-image: url("../img/icons/professor.svg"); }
     .gf-nav-container ul.nav-tabs li.active .gf-icon.students::before {
-      background-image: url("/img/icons/student-b.svg"); }
+      background-image: url("../img/icons/student-b.svg"); }
     .gf-nav-container ul.nav-tabs li.active .gf-icon.teachers::before {
-      background-image: url("/img/icons/professor-b.svg"); }
+      background-image: url("../img/icons/professor-b.svg"); }
     .gf-nav-container ul.nav-tabs li.active a {
       cursor: pointer;
       color: #222; }
