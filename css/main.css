@@ -135,6 +135,9 @@ blockquote {
 .my-mfp-zoom-in.mfp-removing.mfp-bg {
   opacity: 0; }
 
+#top > #gf-navbar-collapse {
+  width: 100%; }
+
 .navbar-brand-logo {
   margin: 3px 10px; }
 
@@ -142,10 +145,14 @@ blockquote {
   display: flex;
   align-items: center;
   color: rgba(119, 119, 119, 0.5);
+  margin: 5px 30px 0px 15px;
   line-height: 0.6em; }
   .navbar-brand-logo-container small {
     font-size: 0.4em; }
 
+@media (max-width: 750px) {
+  .navbar-brand-logo-container {
+    margin: 0px 10px 0px 0px; } }
 header .navbar {
   border-radius: 0px;
   border-bottom-color: transparent !important;
@@ -190,7 +197,7 @@ header .navbar {
   position: relative;
   padding-top: 10%;
   /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-  padding-bottom: 10%;
+  padding-bottom: 12%;
   text-align: center;
   color: #f8f8f8;
   background: url(../img/cover.jpg) no-repeat center center;
@@ -219,7 +226,7 @@ header .navbar {
 @media (max-width: 750px) {
   .intro-message {
     padding-top: 8.5%;
-    padding-bottom: 15%; }
+    padding-bottom: 25%; }
 
   .intro-message > h1 {
     font-size: 1.2em;
@@ -303,26 +310,74 @@ header .navbar {
     margin-bottom: 0; } }
 .landscape-apple-store {
   position: absolute;
-  bottom: 10%;
+  bottom: 20%;
   right: 25px; }
 
 .gf-nav-container {
-  background-color: #f8f8f8;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.2em;
   font-weight: 600;
-  margin: 0.55rem; }
-  .gf-nav-container ul {
+  margin: 0; }
+  .gf-nav-container ul.nav-tabs {
     display: flex;
     align-items: flex-end;
     justify-content: center;
     width: 100%; }
+    .gf-nav-container ul.nav-tabs li a {
+      color: white;
+      width: 300px;
+      padding-top: 1.5rem;
+      border-radius: 0px;
+      font-size: 1.2rem;
+      text-transform: uppercase; }
+      .gf-nav-container ul.nav-tabs li a:hover, .gf-nav-container ul.nav-tabs li a:active {
+        border-color: rgba(0, 0, 0, 0.1);
+        background-color: rgba(0, 0, 0, 0.1); }
+    .gf-nav-container ul.nav-tabs li .gf-icon.students::before, .gf-nav-container ul.nav-tabs li .gf-icon.teachers::before {
+      display: block;
+      content: "\00a0";
+      background-size: 4rem;
+      background-position: top center;
+      background-repeat: no-repeat;
+      width: 4rem;
+      height: 36px;
+      margin: auto;
+      margin-bottom: 10px; }
+    .gf-nav-container ul.nav-tabs li .gf-icon.students::before {
+      background-image: url("/img/icons/student.svg"); }
+    .gf-nav-container ul.nav-tabs li .gf-icon.teachers::before {
+      background-image: url("/img/icons/professor.svg"); }
+    .gf-nav-container ul.nav-tabs li.active .gf-icon.students::before {
+      background-image: url("/img/icons/student-b.svg"); }
+    .gf-nav-container ul.nav-tabs li.active .gf-icon.teachers::before {
+      background-image: url("/img/icons/professor-b.svg"); }
+    .gf-nav-container ul.nav-tabs li.active a {
+      cursor: pointer;
+      color: #222; }
+      .gf-nav-container ul.nav-tabs li.active a:hover, .gf-nav-container ul.nav-tabs li.active a:active {
+        border-color: white;
+        background-color: white; }
 
 @media (max-width: 750px) {
-  .gf-nav-container li a {
-    font-size: 1rem; } }
+  .gf-nav-container ul.nav-tabs li {
+    width: 50%; }
+  .gf-nav-container ul.nav-tabs li a {
+    width: 100% !important;
+    font-size: 0.9rem; }
+    .gf-nav-container ul.nav-tabs li a .gf-icon.students::before, .gf-nav-container ul.nav-tabs li a .gf-icon.teachers::before {
+      background-size: 3rem;
+      margin-bottom: 0px; } }
 .section-a, .section-b, .section-c {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .section-a .profile-picture, .section-b .profile-picture, .section-c .profile-picture {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; }
 
 .section-a {
   padding: 2rem 0; }
@@ -334,12 +389,17 @@ header .navbar {
   background-color: #f8f8f8; }
 
 .section-c {
-  padding: 30px 0;
   background-color: #46637f; }
+  .section-c .content {
+    padding: 30px auto; }
   .section-c .section-heading {
-    color: white; }
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px; }
   .section-c .lead {
-    color: rgba(255, 255, 255, 0.9); }
+    color: rgba(255, 255, 255, 0.9);
+    padding-left: 15px;
+    padding-right: 15px; }
     .section-c .lead b {
       color: white; }
     .section-c .lead .lets-go {
@@ -348,6 +408,38 @@ header .navbar {
       background-color: rgba(255, 255, 255, 0.9);
       color: #283849;
       border-color: white; }
+  .section-c.profile-pictures {
+    background-color: #4f6f8f; }
+    .section-c.profile-pictures > div {
+      position: static; }
+    .section-c.profile-pictures .profile-picture-container {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 2em 0; }
+    .section-c.profile-pictures .profile-picture {
+      width: 20%;
+      margin: 2px;
+      float: left;
+      background-color: black;
+      overflow: hidden; }
+      .section-c.profile-pictures .profile-picture img {
+        opacity: 0.75;
+        transition: all 0.6s linear; }
+        .section-c.profile-pictures .profile-picture img:hover {
+          opacity: 1; }
+      .section-c.profile-pictures .profile-picture .caption {
+        position: absolute;
+        display: block;
+        width: 100%;
+        bottom: 0;
+        color: #ddd;
+        text-shadow: 1px 1px 2px black;
+        font-weight: 400; }
+      .section-c.profile-pictures .profile-picture:hover caption {
+        color: white; }
 
 .section-heading {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -386,12 +478,15 @@ header .navbar {
   position: relative; }
   #signup_students h1, #signup_teachers h1 {
     color: rgba(255, 255, 255, 0.4); }
+  #signup_students h2, #signup_students h3, #signup_students h4, #signup_students h5, #signup_teachers h2, #signup_teachers h3, #signup_teachers h4, #signup_teachers h5 {
+    color: rgba(255, 255, 255, 0.8); }
   #signup_students .form-control, #signup_teachers .form-control {
     font-size: 2rem; }
     #signup_students .form-control.flat, #signup_teachers .form-control.flat {
       color: white;
-      border-color: rgba(255, 255, 255, 0.5) !important; }
-  #signup_students .form-group.has-error .form-control.ng-invalid-add, #signup_teachers .form-group.has-error .form-control.ng-invalid-add {
+      border-color: rgba(255, 255, 255, 0.5); }
+  #signup_students .form-group.has-error .form-control.flat, #signup_teachers .form-group.has-error .form-control.flat {
+    color: rgba(255, 0, 0, 0.8) !important;
     border-color: rgba(255, 0, 0, 0.5) !important; }
   #signup_students .btn.flat.primary, #signup_teachers .btn.flat.primary {
     color: white;
@@ -399,6 +494,9 @@ header .navbar {
   #signup_students .mfp-close, #signup_teachers .mfp-close {
     color: white; }
 
+@media (max-width: 750px) {
+  #signup_students h1, #signup_teachers h1 {
+    font-size: 2rem; } }
 footer {
   color: white;
   padding: 50px 0;
