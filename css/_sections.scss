@@ -112,8 +112,12 @@
 }
 
 .section-c {
-  .content{ padding: 30px auto;  }
   background-color: lighten(#34495E, 10);
+
+  .content{
+    padding: 30px auto;
+  }
+
   .section-heading{
     color:white;
     padding-left: 15px;
@@ -129,10 +133,21 @@
     }
     .flat{
       background-color: transparentize(white,0.1);
+      font-size:24px;
       color:$brand-inverse;
       border-color:white;
+      border-bottom: 5px solid #bbb;
+      border-radius: 6px;
+      margin: 0.6em auto;
     }
   }
+
+  &.signup{
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  // Profile Gallery
   &.profile-pictures{
     background-color: lighten(#34495E, 15);
     > div{
@@ -150,26 +165,14 @@
       width: 20%;
       margin: 2px;
       float: left;
-      background-color: black;
+      background-color: white;
       overflow: hidden;
       img{
         opacity: 0.75;
-        transition: all 0.6s linear;
+        transition: opacity 0.8s ease;
         &:hover{
           opacity: 1;
         }
-      }
-      .caption{
-        position: absolute;
-        display: block;
-        width: 100%;
-        bottom: 0;
-        color: #ddd;
-        text-shadow: 1px 1px 2px black;
-        font-weight: 400;
-      }
-      &:hover caption{
-        color:white;
       }
     }
   }
@@ -182,6 +185,9 @@
     margin-top: 8rem;
     margin-bottom: 3rem;
     color: lighten($brand-primary, 5);
+    &.heading-sm{
+      margin-top: 3rem;
+    }
 }
 
 .lead {
