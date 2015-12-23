@@ -406,8 +406,15 @@ header .navbar {
       margin: 15px auto; }
     .section-c .lead .flat {
       background-color: rgba(255, 255, 255, 0.9);
+      font-size: 24px;
       color: #283849;
-      border-color: white; }
+      border-color: white;
+      border-bottom: 5px solid #bbb;
+      border-radius: 6px;
+      margin: 0.6em auto; }
+  .section-c.signup {
+    padding-top: 5%;
+    padding-bottom: 5%; }
   .section-c.profile-pictures {
     background-color: #4f6f8f; }
     .section-c.profile-pictures > div {
@@ -423,23 +430,13 @@ header .navbar {
       width: 20%;
       margin: 2px;
       float: left;
-      background-color: black;
+      background-color: white;
       overflow: hidden; }
       .section-c.profile-pictures .profile-picture img {
         opacity: 0.75;
-        transition: all 0.6s linear; }
+        transition: opacity 0.8s ease; }
         .section-c.profile-pictures .profile-picture img:hover {
           opacity: 1; }
-      .section-c.profile-pictures .profile-picture .caption {
-        position: absolute;
-        display: block;
-        width: 100%;
-        bottom: 0;
-        color: #ddd;
-        text-shadow: 1px 1px 2px black;
-        font-weight: 400; }
-      .section-c.profile-pictures .profile-picture:hover caption {
-        color: white; }
 
 .section-heading {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -448,6 +445,8 @@ header .navbar {
   margin-top: 8rem;
   margin-bottom: 3rem;
   color: #00a965; }
+  .section-heading.heading-sm {
+    margin-top: 3rem; }
 
 .lead {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -497,6 +496,17 @@ header .navbar {
 @media (max-width: 750px) {
   #signup_students h1, #signup_teachers h1 {
     font-size: 2rem; } }
+.popover {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 0px;
+  border: 1px solid #005d38;
+  width: 300px;
+  min-height: 100px; }
+  .popover .popover-title {
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-color: #007647; }
+
 footer {
   color: white;
   padding: 50px 0;
