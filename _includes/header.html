@@ -1,28 +1,26 @@
   <section id="about">
     <header>
-      <nav class="navbar navbar-default" role="navigation">
-        <h3 class="navbar-brand-logo-container">
-          <a href="#">
-            <img class="navbar-brand-logo" alt="{{ site.title }}" width="38" src="img/logo.svg">
-          </a>
-          Girafales
-        </h3>
-      </nav>
       <nav id="top" class="navbar navbar-default with-shadow">
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="gf-navbar-collapse">
-              <a class="btn btn-primary navbar-btn navbar-right gf-sigin" href={{ site.url_login }}>Entrar no Girafales</a>
+            <h3 class="navbar-brand-logo-container pull-left">
+              <a href="#">
+                <img class="navbar-brand-logo" alt="{{ site.title }}" width="38" src="img/logo.svg">
+              </a>
+              <span class="hidden-xs">Girafales</span>
+            </h3>
+              <a class="btn btn-primary navbar-btn pull-right gf-sigin" href={{ site.url_login }}>Entrar no Girafales</a>
               <ul class="nav navbar-nav">
                 <li>
-                    <a class="page-scroll" href="#about">Sobre</a>
+                    <a class="page-scroll" href="#about">Início</a>
                   </li>
-                  <li ng-class="{'force-unable':!home.slides.students.active}">
-                    <a class="page-scroll" href="#services" ng-click="home.toStudents($event)">
-                      Aluno
+                  <li>
+                    <a class="page-scroll" href="#services">
+                      Serviços
                     </a>
                   </li>
-                  <li ng-class="{'force-unable':!home.slides.teachers.active}">
-                    <a class="page-scroll" href="#services" ng-click="home.toTeachers($event)">Professor</a>
+                  <li>
+                    <a class="page-scroll" href="#contact">Contatos</a>
                   </li>
               </ul>
           </div>
@@ -52,4 +50,20 @@
     </div>
     <!-- /.container -->
   <!-- /.intro-header -->
+  <div class="gf-nav-container margin-bottom">
+    <ul class="nav nav-tabs" role="tablist" id="services">
+      <li ng-click="home.toStudents($event)" ng-class="{'active':home.slides.students.active}">
+        <a class="page-scroll" href="#services">
+          <span class="gf-icon students"/>
+           Para Alunos
+         </a>
+      </li>
+      <li ng-click="home.toTeachers($event)" ng-class="{'active':home.slides.teachers.active}">
+        <a class="page-scroll" href="#services">
+          <span class="gf-icon teachers"/>
+          Para Professsores
+        </a>
+      </li>
+    </ul>
+  </div>
 </section>

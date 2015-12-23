@@ -24,7 +24,7 @@ angular.module('girafalesHomeApp')
       $timeout(function(){
         self.slides.students.active = true
         self.slides.teachers.active = false
-      },300)
+      },100)
     }
 
     self.toTeachers = function(e){
@@ -32,8 +32,54 @@ angular.module('girafalesHomeApp')
       $timeout(function(){
         self.slides.students.active = false
         self.slides.teachers.active = true
-      },300)
+      },100)
     }
+
+    // Professors profiles
+    self.profiles = [
+      {
+        title:"Thiago Pacífico",
+        content:"Matemática Básica, Raciocínio Lógico",
+        picture:"img/profiles/01.png"
+      },
+      {
+        title:"Giovannna Carranza",
+        content:"Administração Geral, Administração Pública",
+        picture:"img/profiles/02.jpg"
+      },
+      {
+        title:"Lidiane Coutinho",
+        content:"Direito Administrativo",
+        picture:"img/profiles/03.png"
+      },
+      {
+        title:"Carol Fernandes",
+        content:"Direito Penal, Direito Administrativo",
+        picture:"img/profiles/04.jpg"
+      },
+      {
+        title:"Malu Aragão",
+        content:"Direito Constitucional",
+        picture:"img/profiles/05.jpg"
+      },
+      {
+        title:"Malu Aragão",
+        content:"Direito Constitucional",
+        picture:"img/profiles/06.jpg"
+      },
+      {
+        title:"Malu Aragão",
+        content:"Direito Constitucional",
+        picture:"img/profiles/06.jpg"
+      },
+      {
+        title:"Malu Aragão",
+        content:"Direito Constitucional",
+        picture:"img/profiles/06.jpg"
+      }
+    ]
+
+    // Forms
 
     self.patterns = {
       personName: { regex: /^[a-zA-Z\s]*$/, message: "Apenas letras de A-Z são permitídas" }
