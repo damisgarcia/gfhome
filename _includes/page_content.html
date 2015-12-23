@@ -1,14 +1,4 @@
-<section id="services">
-  <div class="gf-nav-container margin-bottom">
-    <ul class="nav nav-tabs" role="tablist">
-      <li ng-click="home.toStudents($event)" ng-class="{'active':home.slides.students.active}">
-        <a href="#!"><img src="img/icons/student.svg" width="32"/> Para Alunos</a>
-      </li>
-      <li ng-click="home.toTeachers($event)" ng-class="{'active':home.slides.teachers.active}">
-        <a href="#!"><img src="img/icons/teacher.svg" width="34"/> Para Professsores</a>
-      </li>
-    </ul>
-  </div>
+<section>
   <uib-carousel interval="home.carouselInterval" no-wrap="home.noWrapSlides">
   <!-- Page Content -->
     <uib-slide active="home.slides.students.active">

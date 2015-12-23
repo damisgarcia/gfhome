@@ -1,13 +1,36 @@
-<section class="row section-c">
-  <div class="col-md-6 col-xs-12">
-      <img class="img-responsive margin-top margin-bottom" src="img/teacher-banner.svg"/>
+<section class="row section-c profile-pictures">
+  <div class="col-xs-12 content visible-xs visible-sm">
+    <h2 class="section-heading">Veja quem já faz parte do Girafales!</h2>
+    <div class="lead">
+      Veja aqui todos os professores que já estão publicando suas aulas e cursos no girafales. Cursos que já cobrem grandes Concursos Públicos nacionais.
+    </div>
   </div>
-    <div class="col-md-6 col-xs-12 content">
-        <h2 class="section-heading">Ainda não faz parte do Girafales ?</h2>
+  <div class="col-md-6 col-xs-12">
+    <div class="row profile-picture-container">
+      <div class="profile-picture" ng-repeat="profile in home.profiles">
+        <img class="img-responsive visible-xs visible-sm" width="100%" title="" ng-src="{{ 'profile.picture' | angular}}"/>
+        <img class="img-responsive hidden-xs hidden-sm"
+             width="100%" ng-src="{{ 'profile.picture' | angular}}"
+             popover-trigger="mouseenter"
+             popover-placement="right" uib-popover="{{ 'profile.content' | angular}}"
+             popover-title="{{ 'profile.title' | angular}}" />
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-xs-12 content hidden-xs hidden-sm">
+    <h2 class="section-heading">Veja quem já faz parte do Girafales!</h2>
+    <div class="lead">
+      Veja aqui todos os professores que já estão publicando suas aulas e cursos no girafales. Cursos que já cobrem grandes Concursos Públicos nacionais.
+    </div>
+  </div>
+</section>
+<section class="row section-c signup">
+    <div class="col-md-8 col-md-offset-2 col-xs-12 content margin-large-top margin-large-bottom">
+        <h2 class="section-heading heading-sm">Ainda não faz parte do Girafales ?</h2>
         <div class="lead">
           Com uma assinatura mensal de <b>R$ 24,90</b> você tem acesso a todos os professores, cursos e aulas publicadas (Veja aqui quem já fazem parte da rede).
           E principalmente a um ambiente todo pensado para facilitar o seu estudo.
-          <div class="text-center lets-go">
+          <div class="text-center lets-go margin-large-bottom">
             <a href="#signup_students" magnific-popup type="inline" class="btn btn-lg flat">EXPERIMENTE JÁ</a> <br>
             <small class="margin-large-bottom">Os 3 primeiros dias são gratuitos.</small>
           </div>

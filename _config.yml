@@ -38,5 +38,5 @@ social:
 #       DEPLOY            #
 # ----------------------- #
 
-gems: ['kramdown','jekyll-sass-converter']
+gems: ['kramdown','jekyll-sass-converter','jekyll-angular']
 exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'Procfile', 'Rakefile']
