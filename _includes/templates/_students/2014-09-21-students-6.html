@@ -1,5 +1,5 @@
 <section class="row section-c profile-pictures">
-  <div class="col-xs-12 content visible-xs visible-sm">
+  <div class="col-xs-12 content visible-xs visible-sm margin-bottom">
     <h2 class="section-heading">Veja quem já faz parte do Girafales!</h2>
     <div class="lead">
       Veja aqui todos os professores que já estão publicando suas aulas e cursos no girafales. Cursos que já cobrem grandes Concursos Públicos nacionais.
@@ -8,12 +8,12 @@
   <div class="col-md-6 col-xs-12">
     <div class="row profile-picture-container">
       <div class="profile-picture" ng-repeat="profile in home.profiles">
-        <img class="img-responsive visible-xs visible-sm" width="100%" title="" ng-src="{{ 'profile.picture' | angular}}"/>
+        <img class="img-responsive visible-xs visible-sm" width="100%"
+             tooltip-placement="bottom" uib-tooltip="{{ 'profile.title' | angular }}"
+             ng-src="{{ 'profile.picture' | angular}}"/>
         <img class="img-responsive hidden-xs hidden-sm"
              width="100%" ng-src="{{ 'profile.picture' | angular}}"
-             popover-trigger="mouseenter"
-             popover-placement="right" uib-popover="{{ 'profile.content' | angular}}"
-             popover-title="{{ 'profile.title' | angular}}" />
+             tooltip-placement="bottom" uib-tooltip="{{ 'profile.title' | angular }}" />
       </div>
     </div>
   </div>

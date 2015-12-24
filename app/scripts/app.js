@@ -1,4 +1,6 @@
 angular.module('girafalesHomeApp',['ngAnimate','ui.bootstrap']).run(function($rootScope){
+  // Resize 
+
   var scrollY = 0
   $(window).scroll(function(e){
     e.preventDefault()

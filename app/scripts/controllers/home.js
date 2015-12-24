@@ -63,17 +63,7 @@ angular.module('girafalesHomeApp')
         picture:"img/profiles/05.jpg"
       },
       {
-        title:"Malu Aragão",
-        content:"Direito Constitucional",
-        picture:"img/profiles/06.jpg"
-      },
-      {
-        title:"Malu Aragão",
-        content:"Direito Constitucional",
-        picture:"img/profiles/06.jpg"
-      },
-      {
-        title:"Malu Aragão",
+        title:"Não Definido",
         content:"Direito Constitucional",
         picture:"img/profiles/06.jpg"
       }

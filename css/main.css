@@ -425,17 +425,23 @@ header .navbar {
       justify-content: center;
       flex-wrap: wrap;
       width: 100%;
-      padding: 2em 0; }
+      padding: 0; }
     .section-c.profile-pictures .profile-picture {
-      width: 20%;
-      margin: 2px;
+      width: 33.333%;
       float: left;
-      background-color: white;
+      background-color: #435f7a;
       overflow: hidden; }
       .section-c.profile-pictures .profile-picture img {
-        opacity: 0.75;
-        transition: opacity 0.8s ease; }
+        margin: 0;
+        padding: 0;
+        opacity: 0.3;
+        -webkit-filter: blur(6px);
+        filter: blur(6px);
+        -webkit-transition: all 0.8s ease;
+        transition: all 0.8s ease; }
         .section-c.profile-pictures .profile-picture img:hover {
+          -webkit-filter: blur(0px);
+          filter: blur(0px);
           opacity: 1; }
 
 .section-heading {
@@ -456,6 +462,9 @@ header .navbar {
   margin: auto 15px; }
 
 @media (max-width: 750px) {
+  .profile-picture-container {
+    margin: 0; }
+
   .section-heading {
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -496,16 +505,10 @@ header .navbar {
 @media (max-width: 750px) {
   #signup_students h1, #signup_teachers h1 {
     font-size: 2rem; } }
-.popover {
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 0px;
-  border: 1px solid #005d38;
-  width: 300px;
-  min-height: 100px; }
-  .popover .popover-title {
-    font-weight: 600;
-    background-color: rgba(255, 255, 255, 0.85);
-    border-color: #007647; }
+.tooltip.bottom {
+  margin-top: -3rem; }
+  .tooltip.bottom .tooltip-arrow {
+    display: none; }
 
 footer {
   color: white;
@@ -516,7 +519,19 @@ footer {
     color: #009056; }
   footer .list-inline a {
     color: white; }
+  footer .icon {
+    opacity: 0.7;
+    -webkit-transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear; }
+    footer .icon:hover {
+      opacity: 1; }
 
+@media (max-width: 750px) {
+  footer {
+    display: flex;
+    justify-content: center; }
+    footer hr {
+      border-color: #283849; } }
 p.copyright {
   color: white; }
 
