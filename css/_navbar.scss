@@ -36,6 +36,42 @@ header .navbar{
     -webkit-box-shadow: 0 0 8px 0 rgba(0,0,0,.3);
   }
 
+  &.transparent:not(.affix){
+    background-color: transparentize(black,0.95);
+    // background-color: transparent !important;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 1050;
+
+    ul{
+      li>a{
+        background-color: transparent !important;
+        color:white;
+        font-weight: 400;
+      }
+      li.active>a{
+        background-color: transparentize(black,0.7) !important;
+        color:white !important;
+        font-weight: 700;
+        border-bottom: 0px solid $brand-primary;
+      }
+      li > a:hover{
+        background-color: transparentize(black,0.9) !important;
+      }
+    }
+
+    .navbar-btn{
+      color:white;
+      background-color: transparentize(black,0.9);
+    }
+
+    .navbar-brand-logo-container{
+      color:transparentize(white,0.6);
+    }
+  }
+
   .navbar-collapse{
     padding-left: 0px;
     border:none;
@@ -65,8 +101,7 @@ header .navbar{
 
 @media(max-width:$sm){
   #top{
-    display: flex;
-    align-items: flex-end;
+    min-height: 0px;
     .collapse{
       display: block !important;
       .navbar-nav{
@@ -77,5 +112,12 @@ header .navbar{
   }
   .gf-sigin{
     display: none;
+  }
+  #top.affix{
+    display: flex;
+    align-items: flex-end;
+  }
+  .navbar-brand-logo{
+    width: 32px;
   }
 }
