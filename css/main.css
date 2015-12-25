@@ -5,6 +5,10 @@ a {
     color: #004328;
     text-decoration: underline; }
 
+@font-face {
+  font-family: "My Wandering Heart";
+  font-weight: normal;
+  src: url("../fonts/mywanderingheart.ttf"); }
 body {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #fff;
@@ -81,6 +85,9 @@ blockquote {
 .thin {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300; }
+
+.heart-font {
+  font-family: "My Wandering Heart", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .carousel-indicators, .carousel-control {
   display: none; }
@@ -163,6 +170,29 @@ header .navbar {
   padding: 0px 20px; }
   header .navbar.affix.with-shadow {
     -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3); }
+  header .navbar.transparent:not(.affix) {
+    background-color: rgba(0, 0, 0, 0.05);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050; }
+    header .navbar.transparent:not(.affix) ul li > a {
+      background-color: transparent !important;
+      color: white;
+      font-weight: 400; }
+    header .navbar.transparent:not(.affix) ul li.active > a {
+      background-color: rgba(0, 0, 0, 0.3) !important;
+      color: white !important;
+      font-weight: 700;
+      border-bottom: 0px solid #009056; }
+    header .navbar.transparent:not(.affix) ul li > a:hover {
+      background-color: rgba(0, 0, 0, 0.1) !important; }
+    header .navbar.transparent:not(.affix) .navbar-btn {
+      color: white;
+      background-color: rgba(0, 0, 0, 0.1); }
+    header .navbar.transparent:not(.affix) .navbar-brand-logo-container {
+      color: rgba(255, 255, 255, 0.4); }
   header .navbar .navbar-collapse {
     padding-left: 0px;
     border: none; }
@@ -183,8 +213,7 @@ header .navbar {
 
 @media (max-width: 750px) {
   #top {
-    display: flex;
-    align-items: flex-end; }
+    min-height: 0px; }
     #top .collapse {
       display: block !important; }
       #top .collapse .navbar-nav {
@@ -192,12 +221,19 @@ header .navbar {
         margin: 0px -15px; }
 
   .gf-sigin {
-    display: none; } }
+    display: none; }
+
+  #top.affix {
+    display: flex;
+    align-items: flex-end; }
+
+  .navbar-brand-logo {
+    width: 32px; } }
 .intro-header {
   position: relative;
-  padding-top: 10%;
-  /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-  padding-bottom: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   color: #f8f8f8;
   background: url(../img/cover.jpg) no-repeat center center;
@@ -225,8 +261,8 @@ header .navbar {
 
 @media (max-width: 750px) {
   .intro-message {
-    padding-top: 8.5%;
-    padding-bottom: 25%; }
+    padding-top: 20.5%;
+    padding-bottom: 28.5%; }
 
   .intro-message > h1 {
     font-size: 1.2em;
@@ -516,7 +552,7 @@ footer {
   background-color: #34495E;
   min-height: 400px; }
   footer a {
-    color: #009056; }
+    color: white; }
   footer .list-inline a {
     color: white; }
   footer .icon {
@@ -525,13 +561,19 @@ footer {
     transition: opacity 0.3s linear; }
     footer .icon:hover {
       opacity: 1; }
+  footer h3 {
+    margin: 0; }
 
 @media (max-width: 750px) {
   footer {
     display: flex;
     justify-content: center; }
     footer hr {
-      border-color: #283849; } }
+      border-color: #283849; }
+    footer h1 {
+      font-size: 2.4rem; }
+    footer h3 {
+      font-size: 1.4rem; } }
 p.copyright {
   color: white; }
 
