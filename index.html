@@ -46,10 +46,23 @@
               <a href="#">
                 <img class="navbar-brand-logo" alt="Girafales" width="38" src="img/logo.svg">
               </a>
+<<<<<<< HEAD
               <span class="heart-font">girafales</span>
             </h3>
               <a class="btn btn-primary navbar-btn pull-right gf-sigin" href=https://staging.girafales.com/login>Entrar no Girafales</a>              
               <ul class="nav navbar-nav hidden-xs hidden-sm">
+=======
+              <span class="hidden-xs heart-font">girafales</span>
+            </h3>
+              <a class="btn btn-primary navbar-btn pull-right gf-sigin" href=https://staging.girafales.com/login>Entrar no Girafales</a>
+              <button type="button" class="navbar-toggle collapsed" ng-click="$pushRightMenu=true" data-toggle="collapse" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <ul class="nav navbar-nav">
+>>>>>>> bdfd3211247993d0ad6bbb146d713ead8c0921e6
                 <li>
                     <a class="page-scroll" href="#about">Início</a>
                   </li>
@@ -436,7 +449,30 @@ Acompanhe os professores com maior visibilidade na rede.
       </div>
   </div>
 </div>
+<<<<<<< HEAD
     
+=======
+
+    <!-- Responsive Push Menu -->
+<nav class="gf-menu--push-right" ng-class="{'active':$pushRightMenu}">
+  <h2 class="container text-right">
+    <a href="#!" ng-click="$pushRightMenu=false;" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+  </h2>
+  <ul class="list-group text-center">
+    <li class="list-group-item"><a class="btn btn-block btn-large flat inverse" href=https://staging.girafales.com/login> Entrar no Sistema</a></li>
+    <li class="list-group-item social row">
+      <a class="btn flat inverse col-xs-6"><i class="fa fa-facebook"></i>&nbsp; Facebook</a>
+      <a class="btn flat inverse col-xs-6"><i class="fa fa-twitter"></i>&nbsp; Twitter</a>
+    </li>
+    <li class="list-group-item social row">
+      <a class="btn btn-large flat inverse col-xs-6"><i class="fa fa-instagram"></i>&nbsp; Instagram</a>
+      <a class="btn btn-large flat inverse col-xs-6"><i class="fa fa-youtube"></i>&nbsp; Youtube</a>
+    </li>
+  </ul>
+</nav>
+<div class="gf-overlayer" ng-class="{'active':$pushRightMenu}" ng-click="$pushRightMenu=false;"></div>
+
+>>>>>>> bdfd3211247993d0ad6bbb146d713ead8c0921e6
     <!-- jQuery Version 1.11.0 -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
