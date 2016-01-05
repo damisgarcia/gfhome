@@ -2,22 +2,14 @@ angular.module('girafalesHomeApp',['ngAnimate','ui.bootstrap']).run(function($ro
   var small_device = 750
   //Force Resize
   if(window.screen.width > small_device){
-<<<<<<< HEAD
     var intro_header_height = $(window).height() + ( $("#services").height() + 30 )
-=======
-    var intro_header_height = window.screen.height
->>>>>>> bdfd3211247993d0ad6bbb146d713ead8c0921e6
     $('.intro-header').height(intro_header_height)
   }
 
   $(window).resize(function(){
     //Force Resize
     if(window.screen.width > small_device){
-<<<<<<< HEAD
       var intro_header_height = $(window).height() + ( $("#services").height() + 30 )
-=======
-      var intro_header_height = window.screen.height
->>>>>>> bdfd3211247993d0ad6bbb146d713ead8c0921e6
       $('.intro-header').height(intro_header_height)
     }
   })
