@@ -19,10 +19,17 @@ a {
   }
 }
 
+@font-face {
+  font-family: "My Wandering Heart";
+  font-weight: normal;
+  src: url("../fonts/mywanderingheart.ttf");
+}
+
 
 // Typography
 $font-family-sans-serif:  "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
 $font-family-sans-serif-thin:  "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+$font-family-heart:       "My Wandering Heart","Helvetica Neue",Helvetica,Arial,sans-serif;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif;
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base:        $font-family-sans-serif;
@@ -52,6 +59,13 @@ body {
   background-color: $body-bg;
   text-color: $text-color;
   font-weight: 300;
+  -webkit-transition: border 1s ease;
+  transition: border 1s ease;
+}
+
+// Body Transitions
+body.move-right{
+  overflow:hidden;
 }
 
 h1,h2,h3,h4,h5,h6{

@@ -2,8 +2,9 @@
 
 .intro-header {
     position: relative;
-    padding-top: 10%; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-bottom: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     color: #f8f8f8;
     background: url(../img/cover.jpg) no-repeat center center;
@@ -38,8 +39,8 @@
 
 @media(max-width:$sm) {
   .intro-message {
-    padding-top: 8.5%;
-    padding-bottom: 25%;
+    padding-top: 20.5%;
+    padding-bottom: 28.5%;
   }
 
   .intro-message > h1 {

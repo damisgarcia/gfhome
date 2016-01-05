@@ -159,18 +159,24 @@
       justify-content: center;
       flex-wrap: wrap;
       width: 100%;
-      padding: 2em 0;
+      padding: 0;
     }
     .profile-picture{
-      width: 20%;
-      margin: 2px;
+      width: 32.5%;
       float: left;
-      background-color: white;
+      background-color: lighten($brand-inverse,15);
       overflow: hidden;
       img{
-        opacity: 0.75;
-        transition: opacity 0.8s ease;
+        margin: 0;
+        padding: 0;
+        opacity: 0.3;
+        -webkit-filter:blur(6px);
+        filter:blur(6px);
+        -webkit-transition: all 0.8s ease;
+        transition: all 0.8s ease;
         &:hover{
+          -webkit-filter:blur(0px);
+          filter:blur(0px);
           opacity: 1;
         }
       }
@@ -199,6 +205,9 @@
 }
 
 @media (max-width: $sm){
+  .profile-picture-container{
+    margin: 0;
+  }
   .section-heading{
     margin-top: 2rem;
     margin-bottom: 1rem;

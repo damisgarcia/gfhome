@@ -1,22 +1,23 @@
   <section id="about">
     <header>
-      <nav id="top" class="navbar navbar-default with-shadow">
+      <nav id="top" class="navbar navbar-default with-shadow transparent">
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="gf-navbar-collapse">
             <h3 class="navbar-brand-logo-container pull-left">
               <a href="#">
                 <img class="navbar-brand-logo" alt="{{ site.title }}" width="38" src="img/logo.svg">
               </a>
-              <span class="hidden-xs">Girafales</span>
+              <span class="heart-font">girafales</span>
             </h3>
-              <a class="btn btn-primary navbar-btn pull-right gf-sigin" href={{ site.url_login }}>Entrar no Girafales</a>
-              <ul class="nav navbar-nav">
+              <a class="btn btn-primary navbar-btn pull-right gf-sigin" href={{ site.url_login }}>Entrar no Girafales</a>              
+              <ul class="nav navbar-nav hidden-xs hidden-sm">
                 <li>
                     <a class="page-scroll" href="#about">Início</a>
                   </li>
                   <li>
                     <a class="page-scroll" href="#services">
-                      Serviços
+                      <span ng-show="home.slides.students.active">Aluno</span>
+                      <span ng-show="home.slides.teachers.active">Professor</span>
                     </a>
                   </li>
                   <li>
@@ -44,8 +45,8 @@
           </div>
         </div>
       </div>
-      <a href="https://google.com.br" target="_blank" class="btn btn-sm flat inverse landscape-apple-store hidden-xs">
-        <img class="landscape-apple-store-icon" src="img/icons/apple-store-icon.svg" width="32"/> Getting on Apple Sore
+      <a href="https://google.com.br" target="_blank" class="landscape-apple-store hidden-xs">
+        <img class="landscape-apple-store-icon" src="img/icons/applestore.svg" width="156"/>
       </a>
     </div>
     <!-- /.container -->

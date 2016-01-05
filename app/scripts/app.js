@@ -1,4 +1,19 @@
 angular.module('girafalesHomeApp',['ngAnimate','ui.bootstrap']).run(function($rootScope){
+  var small_device = 750
+  //Force Resize
+  if(window.screen.width > small_device){
+    var intro_header_height = $(window).height() + ( $("#services").height() + 30 )
+    $('.intro-header').height(intro_header_height)
+  }
+
+  $(window).resize(function(){
+    //Force Resize
+    if(window.screen.width > small_device){
+      var intro_header_height = $(window).height() + ( $("#services").height() + 30 )
+      $('.intro-header').height(intro_header_height)
+    }
+  })
+
   var scrollY = 0
   $(window).scroll(function(e){
     e.preventDefault()

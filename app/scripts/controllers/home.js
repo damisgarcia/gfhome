@@ -7,6 +7,9 @@
  * # HomeCtrl
  * Controller of the landscapeTemplateApp
  */
+
+var SERVER = "https://staging.girafales.com"
+
 angular.module('girafalesHomeApp')
   .controller('HomeCtrl', function ($timeout) {
     var self = this
@@ -63,17 +66,7 @@ angular.module('girafalesHomeApp')
         picture:"img/profiles/05.jpg"
       },
       {
-        title:"Malu Aragão",
-        content:"Direito Constitucional",
-        picture:"img/profiles/06.jpg"
-      },
-      {
-        title:"Malu Aragão",
-        content:"Direito Constitucional",
-        picture:"img/profiles/06.jpg"
-      },
-      {
-        title:"Malu Aragão",
+        title:"Não Definido",
         content:"Direito Constitucional",
         picture:"img/profiles/06.jpg"
       }
@@ -89,17 +82,16 @@ angular.module('girafalesHomeApp')
     self.signup_teachers = { name:null, email:null }
 
     self.submit_signup_students = function(form){
-      console.log(form.name)
       if(form.$valid){
         var params = ["name="+self.signup_students.name, "email="+self.signup_students.email]
-        window.location.href = "https://staging.girafales.com/student/new?" + params.join("&")
+        window.location.href = SERVER + "/student/new#?" + params.join("&")
       }
     }
 
     self.submit_signup_teachers = function(form){
       if(form.$valid){
         var params = ["name="+self.signup_teachers.name, "email="+self.signup_teachers.email]
-        window.location.href = "https://staging.girafales.com/professor/new?" + params.join("&")
+        window.location.href = SERVER + "/professor/new#?" + params.join("&")
       }
     }
   });
