@@ -67,7 +67,7 @@ header .navbar{
 
     .navbar-btn{
       color:white;
-      background-color: transparentize(black,0.9);
+      background-color: transparentize($brand-primary,0.8) !important;
     }
 
     .navbar-brand-logo-container{
@@ -119,9 +119,6 @@ header .navbar{
     }
   }
 
-  .gf-sigin{
-    display: none;
-  }
 
   #top.affix{
     display: flex;
@@ -134,9 +131,23 @@ header .navbar{
     .navbar-toggle{
       display: none;
     }
+    .gf-sigin{
+      display: block;
+      font-size:8pt;
+    }
   }
   .navbar-brand-logo{
     width: 32px;
+    margin:8px 10px;
+  }
+
+  header .navbar.transparent:not(.affix){
+    .navbar-btn.gf-sigin{
+      background-color: transparent !important;
+      border-color:#ccc;
+      color:#ccc;
+      font-size:8pt;
+    }
   }
 }
 

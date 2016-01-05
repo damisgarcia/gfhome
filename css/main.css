@@ -198,7 +198,7 @@ header .navbar {
       background-color: rgba(0, 0, 0, 0.1) !important; }
     header .navbar.transparent:not(.affix) .navbar-btn {
       color: white;
-      background-color: rgba(0, 0, 0, 0.1); }
+      background-color: rgba(0, 144, 86, 0.2) !important; }
     header .navbar.transparent:not(.affix) .navbar-brand-logo-container {
       color: rgba(255, 255, 255, 0.4); }
   header .navbar .navbar-collapse {
@@ -231,9 +231,6 @@ header .navbar {
         display: none;
         margin: 0px -15px; }
 
-  .gf-sigin {
-    display: none; }
-
   #top.affix {
     display: flex;
     align-items: flex-end; }
@@ -241,9 +238,19 @@ header .navbar {
       display: flex; }
     #top.affix .navbar-toggle {
       display: none; }
+    #top.affix .gf-sigin {
+      display: block;
+      font-size: 8pt; }
 
   .navbar-brand-logo {
-    width: 32px; } }
+    width: 32px;
+    margin: 8px 10px; }
+
+  header .navbar.transparent:not(.affix) .navbar-btn.gf-sigin {
+    background-color: transparent !important;
+    border-color: #ccc;
+    color: #ccc;
+    font-size: 8pt; } }
 .gf-menu--push-right {
   position: fixed;
   width: 300px;
@@ -513,7 +520,7 @@ header .navbar {
       width: 100%;
       padding: 0; }
     .section-c.profile-pictures .profile-picture {
-      width: 33.333%;
+      width: 32.5%;
       float: left;
       background-color: #435f7a;
       overflow: hidden; }
