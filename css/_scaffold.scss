@@ -59,6 +59,13 @@ body {
   background-color: $body-bg;
   text-color: $text-color;
   font-weight: 300;
+  -webkit-transition: border 1s ease;
+  transition: border 1s ease;
+}
+
+// Body Transitions
+body.move-right{
+  overflow:hidden;
 }
 
 h1,h2,h3,h4,h5,h6{

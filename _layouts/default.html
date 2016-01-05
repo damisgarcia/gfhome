@@ -2,7 +2,7 @@
 <html ng-app="girafalesHomeApp">
   {% include head.html %}
 
-  <body ng-controller="HomeCtrl as home">
+  <body ng-controller="HomeCtrl as home" ng-class="{'move-right':$pushRightMenu}">
     {% include header.html %}
     {% include about.html %}
     {% include page_content.html %}
@@ -10,6 +10,7 @@
     {% include footer.html %}
     {% include templates/forms/singup_students.html %}
     {% include templates/forms/singup_teachers.html %}
+    {% include push_right.html %}
     {% include js.html %}
   </body>
 </html>

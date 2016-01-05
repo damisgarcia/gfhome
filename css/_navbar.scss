@@ -1,4 +1,7 @@
 // @autor: Damis Garcia
+#top{
+  z-index: 50;
+}
 #top > #gf-navbar-collapse{
   width: 100%;
 }
@@ -77,6 +80,11 @@ header .navbar{
     border:none;
   }
 
+  .navbar-toggle{
+    margin-right: -15px;
+    border: none;
+  }
+
   .navbar-btn{
     border-color: $brand-primary;
     color:$brand-primary;
@@ -105,19 +113,73 @@ header .navbar{
     .collapse{
       display: block !important;
       .navbar-nav{
-        display: flex;
+        display: none;
         margin:0px -15px;
       }
     }
   }
+
   .gf-sigin{
     display: none;
   }
+
   #top.affix{
     display: flex;
     align-items: flex-end;
+    .collapse{
+      .navbar-nav{
+        display: flex;
+      }
+    }
+    .navbar-toggle{
+      display: none;
+    }
   }
   .navbar-brand-logo{
     width: 32px;
   }
+}
+
+.gf-menu--push-right {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  color: #eee;
+  background-color:$brand-inverse;
+  z-index: 1050;
+  transform: translateX(100%);
+  -webkit-transition: transform 0.6s ease;
+  transition: transform 0.6s ease;
+  .list-group{
+    margin-top: 3rem;
+    li{
+      background-color: $brand-inverse;
+      color:white;
+      font-weight: bold;
+      border-color:$brand-inverse;
+      border-radius: 0px;
+    }
+  }
+  .close{
+    color: invert($brand-inverse);
+    font-size: 3rem;
+  }
+  .social{
+    margin: 0.3rem 15px;
+    .btn{
+      border:none;
+      border-radius: 0px;
+    }
+  }
+}
+
+@media all and (max-width: $sm) {
+  .gf-menu--push-right {
+    transform: translateX(300px);
+  }
+}
+.gf-menu--push-right.active {
+  transform: translateX(0px);
 }

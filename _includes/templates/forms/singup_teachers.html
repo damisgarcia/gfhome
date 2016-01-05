@@ -7,7 +7,7 @@
               <label class="control-label pull-right" ng-show="signup_teachers.name.$error.pattern">
                 <span ng-bind="home.patterns.personName.message"/>
               </label>
-  						<input type="text" ng-model="home.signup.name" class="form-control flat inverse"
+  						<input type="text" ng-model="home.signup_teachers.name" class="form-control flat inverse"
                name="name" placeholder="Nome" ng-pattern="home.patterns.personName.regex" required>
   					</div>
   					<div class="form-group" ng-class="{'has-error':signup_teachers.email.$error.email}">
